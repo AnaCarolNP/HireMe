@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+    <title>Criar currículo</title>
+    <link rel="stylesheet" href="../css/pages/fazercv.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu-principal">
+            <div class="logo">
+                <img src="imagens/handshakepequeno.png" alt="Logo HireMe">
+                <h1><a href="index.html">HireMe</a></h1>
+            </div> 
+             
+            <ul>
+                <li><a href="FazerCV.html">Criar um currículo</a></li>
+                <li><a href="curriculos-candidato.html">Meus currículos</a></li>
+                <li><a href="mensagens-candidato.html"> Mensagens </a></li>
+                <li><a href="perfil-candidato.html"> Meu Perfil </a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="FazerCV.html">Criar um currículo</a></li>
+                <li><a href="curriculos-candidato.html">Meus currículos</a></li>
+                <li><a href="mensagens-candidato.html">Mensagens</a></li>
+                <li><a href="perfil-candidato.html">Meu Perfil</a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+        </div>    
+    </header>
+    
+    <main>
+        <div class="topo-da-pagina">
+        <h1>Olá! Vamos começar a criar o seu currículo.<br>Primeiro, preencha os itens listados abaixo.</h1>
+        </div>
+        <br>
+        <form class ="fazerCV" id="fazer-curriculo-container" action="javascript:void(0)">
+            
+            <div id="resumo-container">
+                <h2>Resumo Profissional</h2><br>
+                <textarea id="resumo" name="resumo" rows="10" cols="80" placeholder="Síntese sobre suas experiências, realizações, qualificações, habilidades e objetivos."></textarea>
+            </div>
+
+            <br><br>
+
+            <div class="botao-cargo" >
+                <img src="imagens/dica.png" alt="dica" onmouseover="showConteudoCargo()" onmouseout="hideConteudoCargo()">
+                <p class="conteudo-cargo">Nesse campo, você deve colocar qual é o cargo ou área que tem interesse de atuar. </p>
+            </div>
+
+            <div id="funcao-container">
+                <h2>Cargo ou Área de atuação</h2><br>
+                <input class="texto" type="text" id="funcao" name="funcao" required>
+            </div>
+
+            <br><br>
+
+            <div id="formacao-container">
+                <h2>Formação</h2><br>
+                Curso: <input class="texto" type="text" id="curso" name="curso" required><br>
+                Instituição: <input class="texto" type="text" id="instituição" name="instituição"required><br>
+                Grau: <select name="grau" id="grau" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="EnsinoMédio">Ensino Médio</option>
+                        <option value="Técnico">Técnico</option>
+                        <option value="Graduação">Graduação</option>
+                        <option value="Especialização">Especialização</option>
+                        <option value="Mestrado">Mestrado</option>
+                        <option value="Doutorado">Doutorado</option>
+                        </select><br>
+                Data de Início: <input type="date" id="início" name="início">
+                Data de Término: <input type="date" id="término" name="término">
+                <input type="checkbox" id="cursando" name="cursando" value="Cursando">Cursando<br>
+            </div>
+            <br>
+            <button type="button" id="adicionar-formacao">+ Adicionar formação</button>
+            
+            <br><br><br>
+            
+            <div id="experiencia-container">
+                <h2>Experiência Profissional</h2><br>
+                Cargo: <input class="texto" type="text" id="cargo" name="Cargo"><br>
+                Empresa: <input class="texto" type="text" id="empresa" name="Empresa"><br>
+                Data de Início: <input type="date" id="começo" name="Início">
+                Data de Saída: <input type="date" id="saída" name="Saída">
+                <input type="checkbox" id="atual" name="atual" value="Atual">Atual<br>
+                Descrição das atividades:<br><br>
+                <textarea id="descrição" name="texto" rows="10" cols="80" placeholder="Cite as atividades executadas mais relevantes."></textarea>
+            </div>
+            <br>
+            <button type="button" id="adicionar-experiencia">+ Adicionar experiência profissional</button>
+            
+            <br><br><br>
+
+            <div class="botao-link" >
+                <img src="imagens/dica.png" alt="dica" onmouseover="showConteudoLink()" onmouseout="hideConteudoLink()">
+                <p class="conteudo-link">Nesse campo, você pode colocar o link das suas redes sociais e/ou portfólio pessoal.</p>
+            </div>
+
+            <div id="link-container">
+                <h2>Links</h2><br>
+                Linkedin: <input class="texto" type="url" id="linkedin" name="links"><br>
+                Outro: <input class="texto" type="url" id="links" name="links"><br> 
+            </div>
+            <br>
+            <button type="button" id="adicionar-link">+Adicionar Link</button>   
+
+            <br><br><br>
+            
+            <div class="botao-dica" >
+                <img src="imagens/dica.png" alt="dica" onmouseover="showConteudo()" onmouseout="hideConteudo()">
+                <p class="conteudo">Você deverá preencher esse campo com seus conhecimentos técnicos e soft skills. Ex: "Java", "Boa comunicação".</p>
+            </div>
+
+            <div id="competencia-container">
+                <h2>Competências</h2><br>
+                <input type="text" id="competência1" name="competência1">
+                <input type="text" id="competência2" name="competência2">
+                <input type="text" id="competência3" name="competência3">
+                <input type="text" id="competência4" name="competência4">
+                <input type="text" id="competência5" name="competência5"><br>
+            </div>
+            <br>
+            <button type="button" id="adicionar-competencia">+ Adicionar competência</button>
+
+            <br><br><br>
+
+            <div id="curso-container">
+                <h2>Cursos e Certificações</h2><br>
+                <input class="texto" type="text" id="cursos" name="cursos"><br>
+            </div>
+            <br>
+            <button type="button" id="adicionar-curso">+ Adicionar curso ou certificação</button>
+
+            <br><br><br>
+                
+            <div id="idioma-container">
+                <h2>Idiomas</h2><br>
+                Idioma: <input type="text" id="idioma" name="idioma">
+                Proficiência:
+                <select name="proficiência" id="proficiência">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="Básico">Básico</option>
+                    <option value="Intermediário">Intermediário</option>
+                    <option value="Avançado">Avançado</option>
+                    <option value="Fluente">Fluente</option>
+                </select>
+            </div>
+            <br>
+            <button type="button" id="adicionar-idioma">+ Adicionar idioma</button>
+                
+            <br><br><br>
+
+            <div>
+                <label for="salvar"></label>
+                <button type="submit" id="salvar" formaction="/src/html/dadoscv.html">Salvar e ver currículo</button>
+            </div>
+              
+          
+        </form>
+    </main>
+    <script src="../js/fazercv.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/modules/logout.js"></script>
+</body>
+</html>

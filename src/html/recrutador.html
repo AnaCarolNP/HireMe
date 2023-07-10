@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+        <title>Meu perfil</title>
+
+        <link rel="stylesheet" href="../css/pages/recrutador.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="menu-principal">
+                <img src="imagens/handshakepequeno.png" alt="Logo HireMe">
+                <h1><a href="index.html">HireMe</a></h1>
+                <ul>
+                    <li><a href="recrutador-busca.html">Buscar profissionais</a></li>
+                    <li><a href="mensagens_recrutador.html">Mensagens </a></li> 
+                    <li><a href="recrutador.html">Meu Perfil </a></li> 
+                    <li><a id="logout">Sair</a></li>
+                </ul>
+                            
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg"></button>
+                </div>
+            </nav>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="recrutador-busca.html">Buscar profissionais</a></li>
+                    <li><a href="mensagens_recrutador.html">Mensagens </a></li> 
+                    <li><a href="recrutador.html">Meu Perfil </a></li> 
+                    <li><a id="logout">Sair</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="container">
+            <div class="bio">
+                <h1 id=nome class="nome">Nome</h1>
+                <img src="imagens/emprego.png" alt="icon de cargo">
+                <div id="foto">
+                    <label for="uploadInput" id="customUpload">
+                        <img id="previewImage" src="imagens/photo-camera-icon.jpeg" alt="Preview da Imagem">
+                        <input type="file" id="uploadInput" accept="image/*">
+                    </label>
+                </div>
+                <h2 id="cargo" class="edit-bio">Cargo</h2>
+                <input id="edit" class="edit" type="image" src="imagens/greenedit.png"></input>
+            </div>
+        
+            <div class="informaçao">
+                <h1>Informações</h1>
+                    <!-- Dados de contato-->
+                        <div class="email-icon">
+                            <img src="imagens/email.png" alt="Icon de email">
+                        </div>
+                        <div class="email">
+                            <h2 id="email">E-mail</h2>
+                        </div>
+
+                        <div class="phone-icon">
+                            <img src="imagens/phone.png" alt="Icon de telefone">
+                        </div>
+                        <div class="phone">
+                            <h2 id="phone">Telefone para contato</h2>
+                        </div>
+
+                        <div class="linkedin-icon">
+                            <img src="imagens/linkedin.png" alt="Icon de linkedin">
+                        </div>
+                        <div class= "linkedin">
+                            <h2 id="linkedin">Linkedin</h2>
+                        </div>
+
+                        <div class="empresa-icon">
+                            <img src="imagens/empresa.png" alt="Icon de empresa">
+                        </div>
+                        <div class= "empresa">
+                            <h2 id="empresa">Empresa para qual trabalha</h2>
+                        </div>
+
+                        <div class="cnpj-icon">
+                            <img src="imagens/empresa.png" alt="Icon de empresa">
+                        </div>
+                        <div class="cnpj">
+                            <h2 id="cnpj">CNPJ</h2>
+                        </div>
+
+                        <div class="site-icon">
+                            <img src="imagens/site.png" alt="Icon de site-icon">
+                        </div>
+                        <div class="site">
+                            <h2 id="site">Site da empresa</h2>
+                        </div>
+
+            </div>
+
+            <div id="modal-form-recrutador" class="modal">
+                <div class="modal-container">
+                    <span class="close">&times;</span>
+                    <h2>Editar perfil</h2>
+                    <form id="form-edit-recrutador">
+
+                        <h3 class="form-cargo">Cargo:</h3>
+                        <input type="text" id="form-cargo" placeholder="Cargo" required><br>
+
+                        <h3 class="form-phone">Telefone:</h3>
+                        <input type="text" id="form-phone" placeholder="Telefone para contato" required><br>
+
+                        <h3 class="form-linkedin">Linkedin:</h3>
+                        <input type="text" id="form-linkedin" placeholder="Linkedin" required><br>
+
+                        <h3 class="form-empresa">Empresa:</h3>
+                        <input type="text" id="form-empresa" placeholder="Empresa para qual trabalha" required><br>
+
+                        <h3 class="form-cnpj">CNPJ:</h3>
+                        <input type="text" id="form-cnpj" placeholder="CNPJ" required><br>
+
+                        <h3 class="form-site">Site:</h3>
+                        <input type="text" id="form-site" placeholder="Site da empresa" required><br>
+            
+                        <input type="submit" id="enviar" value="Enviar">
+                    </form>
+                </div>
+            </div>
+
+        </div>s
+        <script src="../js/modules/logout.js"></script>
+        <script src="../js/recrutador.js"></script>
+    </body>
+</html>

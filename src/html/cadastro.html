@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/pages/cadastro.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+                <div class="logo">
+                    <img src="imagens/handshakepequeno.png" alt="Logo do HireMe">
+                    <h1><a href="index.html">HireMe</a></h1>
+                </div>
+                <ul>
+                    <li> <a href="index.html"> Voltar </a> </li>
+                    <li><a href="login.html">Entrar</a></li>
+                </ul>
+        </nav>
+    </header><hr>
+
+    <main>
+        <div class="cadastro-container">
+            <br><h1 id="cadastro-titulo">Cadastre-se</h3><br>
+            <div class="cadastro-inner-container">
+                <form id="form-cadastro" action="javascript:void(0)">
+                    <div class="form-label">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" required>
+                    </div>
+                    <div class="form-label-nome-sobrenome">
+                        <div class="form-label">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" required>
+                        </div>
+                        <div class="form-label">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" id="sobrenome" required>
+                        </div>
+                    </div>
+                    <div class="form-label">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required>
+                    </div>
+                    <div class="form-label">
+                        <label for="confirm-senha">Confirmar senha</label>
+                        <input type="password" id="confirm-senha">
+                    </div>
+                    <div class="form-label">
+                        <label for="form-options">Qual é o seu objetivo na plataforma?</label>
+                        <select id="form-options" name="form-options" required>
+                            <option hidden disabled selected></option>
+                            <option value="candidato">Quero criar e cadastrar meu currículo</option>
+                            <option value="recrutador">Quero buscar profissionais</option>
+                        </select>
+                    </div> 
+                    <div class="form-label-termos">
+                        <input type="radio" name="termos" id="termos">
+                        <label for="termos">Concordo com os termos</label>
+                    </div>
+                    <button type="submit" id="btn-cadastrar">Continuar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/modules/cadastro.js"></script>
+</body>
+</html>

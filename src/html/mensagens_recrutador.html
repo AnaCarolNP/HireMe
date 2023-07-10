@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+    <title>Caixa de Mensagens</title>
+
+    <link rel="stylesheet" href="../css/pages/mensagens_recrutador.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu_principal">
+            <div class="logo">
+                <img src="imagens/handshakepequeno.png" alt="Logo do HireMe">
+                <h1><a href="index.html">HireMe</a></h1>
+            </div>
+            <ul>
+                <li><a href="recrutador-busca.html">Buscar profissionais</a></li>
+                <li><a href="mensagens_recrutador.html">Mensagens</a></li>
+                <li><a href="recrutador.html">Meu Perfil</a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="recrutador-busca.html">Buscar profissionais</a></li>
+                <li><a href="mensagens_recrutador.html">Mensagens</a></li>
+                <li><a href="recrutador.html">Meu Perfil</a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="container">
+            <div class="caixa-de-mensagem">
+
+                <div class="mensagem-header">
+                    <h1>Mensagens</h1>
+                </div>
+
+                <hr>
+
+                <div class="newmessage">
+                    <img src="imagens/new.png" alt="Icon de nova mensagem">
+                </div>
+
+                <div class="searchbox">
+                    <div class="searchicon">
+                        <img src="imagens/search.png" alt="Icon de pesquisa">
+                    </div>
+                    <form id="caixa-de-pesquisa">
+                        <input class="caixapesquisa" type="text" name="pesquisa" placeholder="  Pesquisar mensagens...">
+                    </form>
+                </div>
+
+                <div class="menu-mensagens">
+                        <h1>Principais</h1>
+                        <h2>Outras</h2>
+
+                        <hr>
+                </div>
+
+
+                <div class="area-mensagens">
+                    <h1>João da Silva</h1>
+                    <h2>10:35 AM</h2>
+                    <h3>Você: Olá, João!</h3>
+
+                    <hr>
+                </div>
+
+            </div>
+
+            <div class="chat">
+
+                <div class="chat-container">
+                    <h2 class="chat-header"> João da Silva</h2>
+                    <h2 class="chat-status"> Disponível</h2>
+                    <abbr title="Favoritar conversa">
+                        <img src="imagens/principal.png" alt="principal">
+                    </abbr>
+                    <hr>
+
+                    <div class="chat-messages">
+                        <div class="message white-bg">
+                            <div class="message-sender">João da Silva</div>
+                            <div class="message-text">Oi, Ana!</div>
+                            <div class="message-timestamp">10:30 AM</div>
+                        </div>
+                        <div class="message green-bg">
+                            <div class="message-sender">Você</div>
+                            <div class="message-text">Olá, João!</div>
+                            <div class="message-timestamp">10:35 AM</div>
+                        </div>
+                    </div>
+            
+            
+                    <form class="chat-input-form">
+                        <input type="text" class="chat-input" required placeholder="Escreva uma mensagem..."/>
+                        <button type="submit" class="button send-button">Enviar</button>
+                    </form>
+                    <button class="button clear-chat-button">Limpar o chat</button>
+                </div>
+
+                <button class="openChat" onmouseover="showModal()">João da Silva</button>
+
+                <dialog>
+                        <button class="voltar">
+                            <img src="imagens/back.png" alt="voltar" onmouseover="closeModal()">
+                        </button>
+                        <h2 class="chat-header"> João da Silva</h2>
+                        <h2 class="chat-status"> Disponível</h2>
+                        <abbr title="Favoritar conversa">
+                            <img src="imagens/principal.png" alt="principal">
+                        </abbr>
+                        <hr>
+    
+                        <div class="chat-messages">
+                            <div class="message white-bg">
+                                <div class="message-sender">João da Silva</div>
+                                <div class="message-text">Oi, Ana!</div>
+                                <div class="message-timestamp">10:30 AM</div>
+                            </div>
+                            <div class="message green-bg">
+                                <div class="message-sender">Você</div>
+                                <div class="message-text">Olá, João!</div>
+                                <div class="message-timestamp">10:35 AM</div>
+                            </div>
+                        </div>
+                
+                
+                        <form class="chat-input-form">
+                            <input type="text" class="chat-input" required placeholder="Escreva uma mensagem..."/>
+                        </form>
+                </dialog>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <script src="../js/mensagens-recrutador.js"></script>
+    <script src="../js/modules/logout.js"></script>
+</body>
+
+</html>

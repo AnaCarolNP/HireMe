@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+    <title>Currículo</title>
+    <link rel="stylesheet" href="/src/css/dadoscv.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="menu-principal">
+            <div class="logo">
+                <img src="imagens/handshakepequeno.png" alt="Logo HireMe">
+                <h1><a href="index.html">HireMe</a></h1>
+            </div> 
+             
+            <ul>
+                <li><a href="FazerCV.html">Criar um currículo</a></li>
+                <li><a href="curriculos-candidato.html">Meus currículos</a></li>
+                <li><a href="mensagens-candidato.html"> Mensagens </a></li>
+                <li><a href="perfil-candidato.html"> Meu perfil </a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="FazerCV.html">Criar um currículo</a></li>
+                <li><a href="curriculos-candidato.html">Meus currículos</a></li>
+                <li><a href="mensagens-candidato.html">Mensagens</a></li>
+                <li><a href="perfil-candidato.html">Meu Perfil</a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+        </div>  
+    </header>
+
+    <main>
+        <button id="generate-pdf">Fazer Download</button>
+        
+        <div id="container">
+            <div id="dados-pequenos" class="column">
+                <div id="foto">
+                </div>
+                <br><br>
+                <div id="skill">
+                    <h2>SKILLS</h2><br>
+                    <p id="competencia1"></p>
+                    <p id="competencia2"></p>
+                    <p id="competencia3"></p>
+                    <p id="competencia4"></p>
+                    <p id="competencia5"></p>
+                </div>
+                <br><br>
+                <div id="idiomas">
+                    <h2>IDIOMAS</h2><br>
+                    <div id="id-prof">
+                        <span id="idioma"></span>
+                        <span>&#183;</span>
+                        <span id="proficiencia"></span>
+                    </div>
+                </div>
+                <br><br>
+                <div id="links-sites">
+                    <h2>LINKS</h2><br>
+                    <p id="linkedin"></p>
+                    <p id="links"></p>
+                </div>
+                <br><br>
+                <div id="contatos">
+                    <h2>CONTATOS</h2><br>
+                    <p id="telefone"></p>
+                    <p id="email"></p>
+                </div>
+            </div>
+
+            <div id="dados-principais" class="column">
+                <div id="nome-cargo">
+                    <br>
+                    <h1 id="nome"></h1>
+                    <h3 id="funcao"></h3>
+                    <br>
+                    <hr>
+                </div>    
+                    <br>
+                <div id="resumo-container">
+                    <h2>RESUMO PROFISSIONAL</h2><br>
+                    <p id="resumo"></p>
+                    <br>
+                    <hr>
+                </div>
+                <br>
+                <div id="exp-container">
+                    <h2>EXPERIÊNCIAS PROFISSIONAIS</h2><br>
+                    <h3 id="cargo"></h3>
+                    <h3 id="empresa"></h3>
+                    <span>&#40;</span>
+                    <span id="comeco"></span>
+                    <span> &#183; </span>
+                    <span id="saida"></span>
+                    <span id="atual"></span>
+                    <span>&#41;</span>
+                    <h4 id="descricao"></h4>
+                    <br>
+                    <hr>
+                </div>
+                <br>
+                <div id="formacao-container">
+                    <h2>FORMAÇÃO</h2><br>
+                    <h3 id="curso"></h3>
+                    <span id="grau"></span>
+                    <span> &#183; </span>
+                    <span id="instituicao"></span>
+                    <span>&#40;</span>
+                    <span id="inicio"></span>
+                    <span> &#183; </span>
+                    <span id="termino"></span>
+                    <span id="cursando"></span>
+                    <span>&#41;</span>
+                    <br><br>
+                    <hr>
+                </div>
+                <br>
+                <div id="curso-container">
+                    <h2>CURSOS E CERTIFICAÇÕES</h2><br>
+                    <p id="cursos"></p>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+        
+    </main>
+    <script src="../js/dadoscv.js" defer></script>
+    <script src="../js/modules/logout.js"></script>
+</body>
+
+</html>

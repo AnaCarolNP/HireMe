@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+        <title>Meu perfil</title>
+        <link rel="stylesheet" href="../css/pages/perfil-candidato.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="menu-principal">
+                <img src="imagens/handshakepequeno.png" alt="Logo HireMe">
+                <h1><a href="index.html">HireMe</a></h1>
+                <ul>
+                    <li><a href="FazerCV.html">Criar um currículo</a></li>
+                    <li><a href="curriculos-candidato.html">Meus currículos</a></li>
+                    <li><a href="mensagens-candidato.html"> Mensagens </a></li>
+                    <li><a href="perfil-candidato.html"> Meu Perfil </a></li>
+                    <li><a id="logout">Sair</a></li>
+                </ul>
+                
+                
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg"></button>
+                </div>
+            </nav>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="FazerCV.html">Criar um currículo</a></li>
+                    <li><a href="curriculos-candidato.html">Meus currículos</a></li>
+                    <li><a href="mensagens-candidato.html">Mensagens</a></li>
+                    <li><a href="perfil-candidato.html">Meu Perfil</a></li>
+                    <li><a id="logout">Sair</a></li>
+                </ul>
+            </div>
+        </header>
+    
+
+        <div id="container">
+            <div class="bio">
+                <h1 id="nome">Nome</h1>
+                <div id="foto">
+                    <label for="uploadInput" id="customUpload">
+                        <img id="previewImage" src="imagens/photo-camera-icon.jpeg" alt="Preview da Imagem">
+                        <input type="file" id="uploadInput" accept="image/*">
+                    </label>
+                </div>
+                <h2 id="biografia" class="edit-bio">Escreva uma biografia</h2>
+                <input id="edit" class="edit" type="image" src="imagens/edit.png"></input>
+            </div>
+
+            <div class="informaçao">
+                <h1>Informações</h1>
+                    <!-- Dados de contato-->
+                    <div class="email-icon">
+                        <img src="imagens/email.png" alt="Icon de email">
+                    </div>
+                    <div class="email">
+                       <h2 id="email">E-mail</h2>
+                    </div>
+
+                    <div class="phone-icon">
+                        <img src="imagens/phone.png" alt="Icon de telefone">
+                    </div>
+                    <div class="phone">
+                        <h2 id="phone">Telefone para contato</h2>
+                    </div>
+
+                    <div class="residencia-icon">
+                        <img src="imagens/residencia.png" alt="Icon de residencia">
+                    </div>
+                    <div class="residencia">
+                        <h2 id="residencia">Local de residência</h2>
+                    </div>
+
+                    <div class="cargo-icon">
+                        <img src="imagens/emprego.png" alt="Icon de cargo">
+                    </div>
+                    <div class="cargo">
+                        <h2 id="cargo">Cargo atual</h2>
+                    </div>
+            </div>
+
+            <div id="modal-form-candidato" class="modal">
+                <div class="modal-container">
+                    <span class="close">&times;</span>
+                    <h2>Editar perfil</h2>
+                    <form id="form-edit-candidato">
+
+                        <h3 class="form-biografia">Biografia:</h3>
+                        <textarea rows="5" cols="50" id="form-biografia" placeholder="  Escreva aqui sua biografia" required></textarea><br>
+
+                        <h3 class="form-phone">Telefone:</h3>
+                        <input type="text" id="form-phone" placeholder="Telefone para contato" required><br>
+
+                        <h3 class="form-residencia">Residencia:</h3>
+                        <input type="text" id="form-residencia" placeholder="Local de residência" required><br>
+
+                        <h3 class="form-cargo">Cargo:</h3>
+                        <input type="text" id="form-cargo" placeholder="Cargo atual" required><br>
+            
+                        <input type="submit" id="enviar" value="Enviar">
+                    </form>
+                </div>
+            </div>
+
+
+            <script src="../js/modules/logout.js"></script>
+            <script src="../js/modules/perfil-candidato.js"></script>
+        </div>
+
+    </body>
+
+
+
+
+</html>

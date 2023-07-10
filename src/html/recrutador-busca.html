@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="imagens/handshakepequeno.png" type="image/png">
+    <title> Buscar profissionais</title>
+
+    <link rel="stylesheet" href="../css/pages/recrutador-busca.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu_principal">
+            <div class="logo">
+                <img src="imagens/handshakepequeno.png" alt="Logo do HireMe">
+                <h1><a href="index.html">HireMe</a></h1>
+            </div>
+            <ul>
+                <li><a href="recrutador-busca.html">Buscar profissionais</a></li>
+                <li><a href="mensagens_recrutador.html">Mensagens</a></li>
+                <li><a href="recrutador.html">Meu Perfil</a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+
+            
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="imagens/menu_white_36dp.svg"></button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="recrutador-busca.html">Buscar profissionais</a></li>
+                <li><a href="curriculos-favoritados-recrutador.html">Favoritos</a></li>
+                <li><a href="mensagens_recrutador.html">Mensagens</a></li>
+                <li><a href="recrutador.html">Meu Perfil</a></li>
+                <li><a id="logout">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div id="container">
+            <div class="filtros">
+                <h1>Filtre profissionais</h1>
+                <form class="pesquisa" method="get">
+                    <input type="text" id="Busca" name="Busca" placeholder="Palavras-chave de busca" required>
+                </form>
+
+            </div>
+
+            <div class="resultados">
+                <h1>Exibindo todos os perfis cadastrados</h1>
+                <div id="perfis-cadastrados"></div>
+            </div>
+
+        </div>
+    </main>
+    <script src="../js/modules/logout.js"></script>
+    <script src="../js/recrutador-busca-perfis.js"></script>
+</body>
+
+</html>
